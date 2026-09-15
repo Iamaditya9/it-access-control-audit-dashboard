@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, render_template, request
 from pathlib import Path
 import csv
+import io
 import sqlite3
 
 app = Flask(__name__)
@@ -82,7 +83,10 @@ def import_csv():
     conn = connect()
     inserted = 0
     generated = 0
-    for row in csv.DictReader(file.stream):
+    content = file.stream.read().decode("utf-8-sig")
+    reader = csv.DictReader(io.StringIO(content))
+
+    for row in reader:
         cur = conn.execute("""INSERT INTO access_records
             (employee_id, employee_name, department, role, system_name, privilege_level,
              mfa_enabled, account_status, last_reviewed)

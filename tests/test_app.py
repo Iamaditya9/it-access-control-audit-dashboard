@@ -15,11 +15,9 @@ def test_summary_starts_empty(client):
 
 def test_import_generates_findings(client):
     csv_data = (
-        "employee_id,employee_name,department,role,system_name,privilege_level,mfa_enabled,account_status,last_reviewed
-"
-        "E1,Alex Doe,Finance,finance-admin,ERP,admin,0,active,
-"
-    )
+    "employee_id,employee_name,department,role,system_name,privilege_level,mfa_enabled,account_status,last_reviewed\n"
+    "E1,Alex Doe,Finance,finance-admin,ERP,admin,0,active,2026-08-01\n"
+)
     response = client.post("/api/import", data={"file": (io.BytesIO(csv_data.encode()), "evidence.csv")})
     assert response.status_code == 200
     assert response.json["inserted"] == 1
