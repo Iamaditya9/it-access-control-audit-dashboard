@@ -1,0 +1,7 @@
+employee_id,employee_name,department,role,system_name,privilege_level,mfa_enabled,account_status,last_reviewed
+E1001,Jordan Lee,Finance,analyst,ERP,standard,1,active,2026-08-01
+E1002,Sam Patel,Finance,finance-admin,ERP,admin,0,active,2026-07-15
+E1003,Taylor Chen,Operations,operator,Inventory,standard,1,inactive,2026-06-20
+E1004,Morgan Singh,Technology,engineer,CloudConsole,privileged,0,active,
+E1005,Riley Brown,Finance,approver-admin,Payments,admin,1,active,2026-07-02
+E1006,Casey Wilson,HR,analyst,HRIS,standard,1,active,2026-08-03

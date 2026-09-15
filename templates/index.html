@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IT Access Control Audit Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<main class="container">
+  <header>
+    <p class="eyebrow">Technology Risk | Access Governance</p>
+    <h1>IT Access Control Audit Dashboard</h1>
+    <p>Review business-critical system access, identify control exceptions, and track remediation.</p>
+  </header>
+  <section class="metrics" id="metrics"></section>
+  <section class="card">
+    <h2>Import access evidence</h2>
+    <form id="upload">
+      <input type="file" name="file" accept=".csv" required>
+      <button type="submit">Run Control Tests</button>
+    </form>
+    <p id="message"></p>
+  </section>
+  <section class="card">
+    <div class="section-title"><h2>Control Findings</h2><button onclick="loadFindings()">Refresh</button></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Control</th><th>Severity</th><th>Finding</th><th>Recommendation</th><th>Status</th></tr></thead>
+        <tbody id="findings"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>

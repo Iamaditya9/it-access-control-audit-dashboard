@@ -1,0 +1,22 @@
+:root { font-family: Inter, Arial, sans-serif; color: #172033; background: #f4f7fb; }
+body { margin: 0; }
+.container { max-width: 1180px; margin: auto; padding: 42px 24px; }
+header { margin-bottom: 28px; }
+.eyebrow { text-transform: uppercase; letter-spacing: .08em; font-size: 12px; font-weight: 700; }
+h1 { margin: 8px 0; font-size: 34px; }
+.card, .metric { background: white; border: 1px solid #dbe2ec; border-radius: 12px; padding: 22px; margin: 20px 0; }
+.metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.metric { margin: 0; }
+.metric span { display: block; color: #64748b; font-size: 13px; }
+.metric strong { display: block; margin-top: 8px; font-size: 30px; }
+.risk strong, .high { color: #b42318; }
+button { border: 0; border-radius: 8px; padding: 10px 15px; cursor: pointer; font-weight: 700; background: #1f6feb; color: white; }
+input { padding: 9px; }
+.section-title { display: flex; justify-content: space-between; align-items: center; }
+.table-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 12px; border-bottom: 1px solid #e6ebf2; text-align: left; vertical-align: top; }
+th { font-size: 12px; text-transform: uppercase; color: #64748b; }
+.medium { color: #a15c00; }
+select { padding: 6px; }
+@media (max-width: 800px) { .metrics { grid-template-columns: 1fr 1fr; } }
